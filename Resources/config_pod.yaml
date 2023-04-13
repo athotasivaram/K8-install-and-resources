@@ -6,16 +6,8 @@ spec:
   containers:
     - name: tomcat
       image: tomcat
-      env:
-      - name: course
-        valueFrom:
-          configMapKeyRef:
+      envFrom:
+        - configMapRef:
             name: course-config
-            key: course
-      - name: duration
-        valueFrom:
-          configMapKeyRef:
-            name: course-config
-            key: duration
 
 
