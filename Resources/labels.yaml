@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-lable
+  labels:
+    cource: Devops
+    duration: 50hrs
+    triner: sivaram
+  annotations:
+    org.docker.kubernetes.jenkins: sivaram
+spec:
+  containers:
+  - name: tomcat
+    image: tomcat
+    ports:
+      containerPort: 80

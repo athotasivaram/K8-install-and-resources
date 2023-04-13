@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tomcat
+spec:
+  containers:
+    image: tomcat:9.0.73
+    imagePullPolicy: Always
+    name: tomcat
+    ports:
+      containerPort: 80

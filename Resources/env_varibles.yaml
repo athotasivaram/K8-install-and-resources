@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: env-pod
+spec:
+  containers:
+  - name: tomcat
+    image: tamcat
+    ports:
+      containerPort: 80
+    env:
+      - name: cource
+        value: devops
+      - name: duration
+        value: 25hrs
+      - name: tranier
+        value: sivaram
