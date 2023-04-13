@@ -6,8 +6,6 @@ spec:
   containers:
   - name: tomcat
     image: tamcat
-    ports:
-      containerPort: 80
     env:
       - name: cource
         value: devops
