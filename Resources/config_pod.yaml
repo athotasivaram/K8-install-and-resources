@@ -8,14 +8,14 @@ spec:
       image: tamcat
       env:
       - name: course
-          valueFrom:
-            configMapKeyRef:
-              name: course-config
-              key: course
+        valueFrom:
+          configMapKeyRef:
+            name: course-config
+            key: course
       - name: duration
-          valueFrom:
-            configMapKeyRef:
-              name: course-config
-              key: duration
+        valueFrom:
+          configMapKeyRef:
+            name: course-config
+            key: duration
 
 
