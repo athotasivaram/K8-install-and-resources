@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: tomcat
-    image: tamcat
+    image: tomcat
     env:
       - name: cource
         value: devops
