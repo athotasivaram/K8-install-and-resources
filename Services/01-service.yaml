@@ -29,7 +29,7 @@ kind: Pod
 metadata:
   name: debug
   labels:
-  purpose: debug
+    purpose: debug
 spec:
   containers:
    - name: almalinux
