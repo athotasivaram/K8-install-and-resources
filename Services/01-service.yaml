@@ -2,27 +2,27 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: tomcat
+  name: nginx
   labels:
-    server: tomcat
+    server: nginx
 spec:
   containers:
-   - name: tomcat
-     image: tomcat
+   - name: nginx
+     image: nginx
      ports:
-     - containerPort: 8080
+     - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: tomcat-service
+  name: nginx-service
 spec:
   selector:
-    server: tomcat
+    server: nginx
   ports:
     - protocol: TCP
-      port: 8080
-      targetPort: 8080
+      port: 80
+      targetPort: 80
 ---
 apiVersion: v1
 kind: Pod
