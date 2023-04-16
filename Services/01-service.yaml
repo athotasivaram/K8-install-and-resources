@@ -10,7 +10,7 @@ spec:
   - name: tomcat
     image: tomcat
     ports:
-    - containerPort: 80
+     containerPort: 80
 ---
 apiVersion: v1
 kind: Service
