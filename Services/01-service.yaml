@@ -32,6 +32,6 @@ metadata:
   purpose: debug
 spec:
   containers:
-    name: almalinux
-    image: almalinux
-    command: ["sleep","500"]
+   - name: almalinux
+     image: almalinux
+     command: ["sleep","500"]
