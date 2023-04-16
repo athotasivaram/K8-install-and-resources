@@ -7,20 +7,20 @@ metadata:
     server: tomcat
 spec:
   containers:
-  - name: tomcat
-    image: tomcat
-    ports:
-     containerPort: 80
+   - name: tomcat
+     image: tomcat
+     ports:
+     - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: service-pod
+  name: tomcat-service
 spec:
   selector:
     server: tomcat
   ports:
-    - protocal: TCP
+    - protocol: TCP
       port: 80
       targetPort: 80
 ---
