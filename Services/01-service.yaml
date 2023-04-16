@@ -4,7 +4,7 @@ kind: Pod
 metadata:
   name: tomcat
   labels:
-    name: tomcat
+    server: tomcat
 spec:
   containers:
   - name: tomcat
@@ -18,8 +18,20 @@ metadata:
   name: service-pod
 spec:
   selector:
-    name: tomcat
+    server: tomcat
   ports:
     - protocal: TCP
       port: 80
       targetPort: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug
+  labels:
+  purpose: debug
+spec:
+  containers:
+    name: almalinux
+    image: almalinux
+    command: ["sleep","500"]
